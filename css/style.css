@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#app {
+    height: 100vh;
+}
+
+/* .background {
+    background: linear-gradient(to bottom, red 0px, red 15vh, blue 15vh, blue 100%)
+} */
+
+/* .container {
+    width: 1690px;
+    margin: 0 auto;
+} */
+
+/* chat */
+
+.card {
+    height: 100%;
+}
+
+.card__header {
+    background-color: #EAEAEA;
+    display: flex;
+    height: 10vh;
+}
+
+.card__header-content {
+    padding: 15px 30px;
+}
+
+.card__body {
+    height: 90vh;
+    background-image: url(../img/mine.jpg);
+}
+
+.card__chat {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+}
+
+.mymessage {
+    align-self: flex-end;
+    background-color: green;
+}
+
+.sidebar {
+    display: none;
+}
+
+/* .hismessage {
+
+} */
+
+
+
+
+
+
+/* MEDIUM DEVICE */
+@media (min-width: 768px) {
+
+}
+
+/* LARGE DEVICE  */
+@media (min-width: 992px) {
+
+}
