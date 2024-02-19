@@ -22,66 +22,53 @@ body {
     height: 100vh;
 }
 
-/* .background {
-    background: linear-gradient(to bottom, red 0px, red 15vh, blue 15vh, blue 100%)
-} */
+.background {
+    background: linear-gradient(to bottom, #4D9288 0px, #4D9288 15vh, #DBDBD4 15vh, #DBDBD4 100%)
+}
 
-/* .container {
-    width: 1690px;
-    margin: 0 auto;
-} */
+.row {
+    display: flex;
+}
 
-/* chat */
+/* LAYOUT */
 
 .card {
-    height: 100%;
+    width: 100vh;
+    height: 890px;
+    background-color: blue;
 }
 
-.card__header {
-    background-color: #EAEAEA;
-    display: flex;
-    height: 10vh;
-}
-
-.card__header-content {
-    padding: 15px 30px;
-}
-
-.card__body {
-    height: 90vh;
-    background-image: url(../img/mine.jpg);
-}
-
-.card__chat {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 20px;
-}
-
-.mymessage {
-    align-self: flex-end;
-    background-color: green;
-}
 
 .sidebar {
     display: none;
+    background-color: red;
 }
-
-/* .hismessage {
-
-} */
-
-
-
-
 
 
 /* MEDIUM DEVICE */
 @media (min-width: 768px) {
+    .sidebar {
+        display: block;
+        width: 20vh;
+    }
 
 }
 
 /* LARGE DEVICE  */
 @media (min-width: 992px) {
 
+
+    .container {
+        width: 1690px;
+        margin: 0 auto;
+        padding: 30px 0px;
+    }
+
+    .card {
+        width: 70%;
+    }
+
+    .sidebar {
+        width: 30%;
+    }
 }
