@@ -27,31 +27,126 @@ body {
     background: linear-gradient(to bottom, #4D9288 0px, #4D9288 15vh, #DBDBD4 15vh, #DBDBD4 100%)
 }
 
+/* LAYOUT */
+
+
+.app_content {
+    height: 100%;
+    display: flex;
+}
+
+.sidebar {
+    display: none;
+    width: 82px;
+    flex-shrink: 0;
+    background-color: white;
+}
+
+.chat-wrapper {
+    flex-grow: 1;
+}
+
 .row {
     display: flex;
 }
 
-/* LAYOUT */
+.pd {
+    padding: 10px 10px;
+}
+
+.menu {
+    display: none;
+}
+
+.image--circle {
+	aspect-ratio: 1 / 1;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+/* SIDEBAR */
+
+.user {
+    background-color: #EAEAEA;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid gray;
+}
+
+.info {
+    background-color: #EAEAEA;
+    justify-content: space-between;
+}
+
+.content__header {
+    width: 50px;
+}
+
+.notify {
+    display: none;
+    align-items: center;
+    background-color: #A6D7F9;
+}
+
+.chat-preview {
+    color: gray;
+    width: 200px;
+}
+
+.menu-item {
+    padding: 0px 10px;
+}
+
+/* CARD USER */
 
 .card {
-    width: 100vh;
-    height: 890px;
-    background-color: blue;
+    border: 1px solid gray;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
-.sidebar {
+.info-user {
     display: none;
-    background-color: red;
+    padding: 0px 10px;
 }
 
+.name-user  {
+    padding-bottom: 10px;
+}
+
+.orario {
+    display: none;
+}
+
+/* DEBUG */
+
+.debug #app {
+    border: 3px solid black;
+}
+
+.debug .app__content {
+    border: 3px solid red;
+}
+
+.debug .app__content > * {
+    border: 3px solid white;
+}
+
+/* .debug .sidebar {
+    background-color: violet;
+} */
+
+.debug .chat-wrapper {
+    background-color: cornflowerblue;
+}
 
 /* MEDIUM DEVICE */
 @media (min-width: 768px) {
+
     .sidebar {
         display: block;
-        width: 20vh;
     }
+
 
 }
 
@@ -59,17 +154,28 @@ body {
 @media (min-width: 992px) {
 
 
-    .container {
-        width: 1690px;
-        margin: 0 auto;
-        padding: 30px 0px;
+    #app {
+        padding: 36px 36px;
     }
 
-    .card {
-        width: 70%;
+    .app__content {
+        width: 80%;
+        margin: 0 auto;
     }
 
     .sidebar {
-        width: 30%;
+        width: 370px;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .info-user, .orario {
+        display: block;
+    }
+
+    .notify {
+        display: flex;
     }
 }
