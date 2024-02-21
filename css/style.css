@@ -46,6 +46,11 @@ body {
     flex-grow: 1;
 }
 
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
 .row {
     display: flex;
 }
@@ -66,11 +71,19 @@ body {
 
 /* SIDEBAR */
 
+.chat-list {
+    flex-grow: 1;
+}
+
+.chat-list .card:not(:last-child) {
+    border-bottom: 1px solid gray;
+}
+
 .user {
     background-color: #EAEAEA;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid gray;
+    border-right: 1px solid gray;
 }
 
 .info {
@@ -80,6 +93,7 @@ body {
 
 .content__header {
     width: 50px;
+
 }
 
 .notify {
@@ -100,7 +114,6 @@ body {
 /* CARD USER */
 
 .card {
-    border: 1px solid gray;
     justify-content: space-between;
     align-items: center;
 }
@@ -118,32 +131,87 @@ body {
     display: none;
 }
 
-/* DEBUG */
+/* CHAT */
 
-.debug #app {
-    border: 3px solid black;
+.chat-wrapper .card {
+    border: 0;
+    background-color: #EAEAEA;
 }
 
-.debug .app__content {
-    border: 3px solid red;
+.chat {
+    padding: 50px 40px;
+    flex-grow: 1;
+    background-image: url(../img/mine.jpg);
 }
 
-.debug .app__content > * {
-    border: 3px solid white;
+.message {
+    position: relative;
+    margin: 5px 0px;
+    padding: 10px 15px;
+    padding-bottom: 50px;
+    max-width: 200px;
+    border-radius: 10px;
 }
 
-/* .debug .sidebar {
-    background-color: violet;
-} */
+.chat .orario {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    display: block;
+}
 
-.debug .chat-wrapper {
-    background-color: cornflowerblue;
+.mytext {
+    align-self: flex-end;
+    background-color: #DEF8C0;
+}
+
+.himtext {
+    align-self: flex-start;
+    background-color: white;
+}
+
+/* WRITE-TEXT */
+
+.messagewrite {
+    width: 100%;
+    align-items: center;
+    padding: 15px 15px;
+    background-color: #F2EEEB;
+}
+
+.messagewrite i {
+    padding: 10px;
+    display: none;
+}
+
+.writespace {
+    flex-grow: 1;
+    outline: none;
+}
+
+.writespace input {
+    width: 100%;
+    padding: 3px;
+    border-radius: 5px;
 }
 
 /* MEDIUM DEVICE */
 @media (min-width: 768px) {
 
     .sidebar {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .chat-wrapper .menu {
+        display: flex;
+    }
+
+    .message {
+        max-width: 400px;
+    }
+
+    .messagewrite i {
         display: block;
     }
 
@@ -177,5 +245,9 @@ body {
 
     .notify {
         display: flex;
+    }
+
+    .message {
+        max-width: 490px;
     }
 }

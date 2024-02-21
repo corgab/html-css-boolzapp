@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/aff6d43c8f.js" crossorigin="anonymous"></script>
     <title>Document</title>  
 </head>
-<body class=" debug background">
+<body class="background">
     <div id="app">
         <div class="app_content">
             <header class="sidebar"> 
@@ -137,8 +137,42 @@
                     </div>
                 </div>
             </header>
-            <main class="chat-wrapper">
-                chat
+            <!-- CHAT-WRAPPER -->
+            <main class="chat-wrapper column">
+                <div class="card row pd">
+                    <div class="content__header row">
+                        <img class="image--circle" src="./img/avatar_1.jpg" alt="">
+                        <div class="info-user">
+                            <h3 class="name-user">michele</h3>
+                            <p class="chat-preview">Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <ul class="menu">
+                        <li class="menu-item"><i class="fa-solid fa-circle-notch"></i></li>
+                        <li class="menu-item"><i class="fa-solid fa-message"></i></li>
+                        <li class="menu-item"><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                    </ul>                    
+                </div>
+                <!-- CHAT -->
+                <section class="chat column">
+                    <div class="mytext message">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nesciunt, incidunt officiis debitis in quod itaque provident quibusdam non pariatur eos? Veritatis asperiores pariatur animi, quae laborum aspernatur eveniet doloribus?</p>
+                        <span class="orario">16:15</span>
+                    </div>
+
+                    <div class="himtext message">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat omnis hic cumque delectus ad neque, inventore quae beatae aliquid impedit perferendis. Sapiente eaque, consequuntur nisi repudiandae architecto accusantium ea temporibus?</p>
+                        <span class="orario">16:15</span>
+                    </div>
+                </section>
+                <!-- MESSAGE-WRITE -->
+                <section class="messagewrite row">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <div class="writespace">
+                        <input type="text" placeholder="Scrivi un messaggio">
+                    </div>
+                    <i class="fa-solid fa-microphone"></i>
+                </section>
             </main>
         </div>
     </div>
